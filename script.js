@@ -1,4 +1,27 @@
+/* MH TECH — landing page interactions
+   Vanilla JS, sin dependencias. Cuatro cosas:
+   1. Menú mobile (nav-toggle)
+   2. Scroll-spy (marca el link activo del nav)
+   3. Panel de tickets "vivo" (rota estados/tickets)
+   4. Copiar email al portapapeles
+*/
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Pequeño aviso visual en consola para confirmar que el JS está activo
+  console.log("%c MH TECH %c JS activo y operando correctamente 🚀", "background: #33d6e0; color: #000; font-weight: bold; padding: 2px 6px; border-radius: 4px;", "color: #e9edf3;");
+
+  // Animación sutil de entrada para notar el dinamismo del DOM
+  const heroContent = document.querySelector('header, main > section:first-child');
+  if (heroContent) {
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(10px)';
+    heroContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    requestAnimationFrame(() => {
+      heroContent.style.opacity = '1';
+      heroContent.style.transform = 'translateY(0)';
+    });
+  }
+
   initMobileNav();
   initScrollSpy();
   initTicketPanel();
@@ -59,7 +82,7 @@ function initTicketPanel() {
   const list = document.getElementById('ticket-list');
   if (!list) return;
 
-  // Reduced motion: dejamos el panel estático como quedó en el HTML
+  // Reduced motion: dejamos el panel estático si el usuario prefiere reducir movimiento
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const queue = [
