@@ -1,13 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MH TECH — Soporte técnico y desarrollo</title>
+<meta name="description" content="MH TECH: soporte técnico N1/N2, optimización de bases de datos y desarrollo web para pequeñas empresas y equipos técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header></header>
+ 
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">MH<span>TECH</span></a>
+    <nav class="main-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#stack">Herramientas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-ghost nav-cta">Escribime</a>
+  </div>
+</header>
+ 
+<main id="top">
+ 
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Soporte técnico &amp; desarrollo a medida</p>
+        <h1>Tu equipo técnico<br>no debería ser<br>un ticket más.</h1>
+        <p class="hero-sub">Ayudo a empresas chicas y equipos de soporte a resolver
+        incidentes más rápido, ordenar sus bases de datos y tener presencia
+        web sin depender de una agencia grande.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">Contame tu caso</a>
+          <a href="#servicios" class="btn btn-text">Ver servicios ↓</a>
+        </div>
+      </div>
+ 
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ticket-panel">
+          <div class="ticket-panel-head">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="ticket-panel-title">panel-soporte</span>
+          </div>
+          <div class="ticket-row">
+            <span class="ticket-id">#4471</span>
+            <span class="ticket-desc">VPN no conecta — cuenta Claro</span>
+            <span class="ticket-status status-open">Abierto</span>
+          </div>
+          <div class="ticket-row ticket-row-active">
+            <span class="ticket-id">#4472</span>
+            <span class="ticket-desc">Login corporativo bloqueado — GM</span>
+            <span class="ticket-status status-progress">En curso</span>
+          </div>
+          <div class="ticket-row ticket-row-resolve">
+            <span class="ticket-id">#4470</span>
+            <span class="ticket-desc">Sync de base de datos técnicos</span>
+            <span class="ticket-status status-resolved">Resuelto</span>
+          </div>
+          <div class="ticket-foot">SLA promedio · 24hs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="servicios" class="services">
+    <div class="wrap">
+      <h2>En qué te puedo ayudar</h2>
+ 
+      <div class="service-list">
+        <article class="service accent-cyan">
+          <h3>Soporte técnico N1 / N2</h3>
+          <p>Atención de incidentes, gestión de tickets y resolución de
+          problemas de red, accesos y hardware para equipos internos o
+          cuentas de terceros.</p>
+        </article>
+ 
+        <article class="service accent-violet">
+          <h3>Bases de datos &amp; automatización</h3>
+          <p>Diseño y optimización de bases en SQL y PL/SQL para ordenar el
+          flujo de trabajo de un equipo de soporte, con reportes y consultas
+          a medida.</p>
+        </article>
+ 
+        <article class="service accent-cyan">
+          <h3>Desarrollo web</h3>
+          <p>Sitios y landing pages livianas, pensadas para mostrar un
+          servicio con claridad: sin plantillas genéricas ni plugins de más.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="proceso" class="process">
+    <div class="wrap">
+      <h2>Cómo trabajo</h2>
+      <ol class="process-steps">
+        <li>
+          <span class="step-n">1</span>
+          <div>
+            <h3>Diagnóstico</h3>
+            <p>Entendemos juntos el problema real, no solo el síntoma: qué
+            proceso se rompe, para quién y con qué frecuencia.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <div>
+            <h3>Resolución</h3>
+            <p>Implemento la solución técnica —soporte, base de datos o
+            sitio— con foco en que quede simple de mantener.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <div>
+            <h3>Seguimiento</h3>
+            <p>Reviso que la solución siga funcionando y quedo disponible
+            para ajustes o próximos pedidos.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+ 
+  <section id="stack" class="stack">
+    <div class="wrap">
+      <h2>Herramientas que uso</h2>
+      <ul class="stack-list">
+        <li>SQL / PL-SQL</li>
+        <li>Redes &amp; VPN</li>
+        <li>Git &amp; GitHub</li>
+        <li>HTML / CSS / JS</li>
+        <li>Gestión de tickets</li>
+        <li>Windows &amp; Linux</li>
+      </ul>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer id="contacto" class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-lead">¿Tenés un problema técnico o un proyecto en mente?</p>
+      <a href="mailto:mikeasheredia33@gmail.com" class="btn btn-primary">mikeasheredia33@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+543518587200">351 858-7200</a>
+      <a href="https://www.linkedin.com/in/miqueas-heredia-60b158146" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/miqueas-prog" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://miqueas-prog.github.io" target="_blank" rel="noopener">Portafolio</a>
+    </div>
+  </div>
+  <p class="footer-copy">MH TECH · Córdoba, Argentina</p>
+</footer>
+ 
 </body>
 </html>
