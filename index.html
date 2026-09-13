@@ -11,22 +11,25 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="#top" class="logo">MH<span>TECH</span></a>
-    <nav class="main-nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Cómo trabajo</a>
-      <a href="#stack">Herramientas</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#servicios" data-section="servicios">Servicios</a>
+      <a href="#proceso" data-section="proceso">Cómo trabajo</a>
+      <a href="#stack" data-section="stack">Herramientas</a>
+      <a href="#contacto" data-section="contacto">Contacto</a>
     </nav>
     <a href="#contacto" class="btn btn-ghost nav-cta">Escribime</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
- 
+
 <main id="top">
- 
+
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
@@ -40,40 +43,42 @@
           <a href="#servicios" class="btn btn-text">Ver servicios ↓</a>
         </div>
       </div>
- 
+
       <div class="hero-visual" aria-hidden="true">
-        <div class="ticket-panel">
+        <div class="ticket-panel" id="ticket-panel">
           <div class="ticket-panel-head">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
             <span class="ticket-panel-title">panel-soporte</span>
           </div>
-          <div class="ticket-row">
-            <span class="ticket-id">#4471</span>
-            <span class="ticket-desc">VPN no conecta — cuenta Claro</span>
-            <span class="ticket-status status-open">Abierto</span>
-          </div>
-          <div class="ticket-row ticket-row-active">
-            <span class="ticket-id">#4472</span>
-            <span class="ticket-desc">Login corporativo bloqueado — GM</span>
-            <span class="ticket-status status-progress">En curso</span>
-          </div>
-          <div class="ticket-row ticket-row-resolve">
-            <span class="ticket-id">#4470</span>
-            <span class="ticket-desc">Sync de base de datos técnicos</span>
-            <span class="ticket-status status-resolved">Resuelto</span>
+          <div class="ticket-list" id="ticket-list">
+            <div class="ticket-row" data-id="4471">
+              <span class="ticket-id">#4471</span>
+              <span class="ticket-desc">VPN no conecta — cuenta Claro</span>
+              <span class="ticket-status status-open">Abierto</span>
+            </div>
+            <div class="ticket-row" data-id="4472">
+              <span class="ticket-id">#4472</span>
+              <span class="ticket-desc">Login corporativo bloqueado — GM</span>
+              <span class="ticket-status status-progress">En curso</span>
+            </div>
+            <div class="ticket-row" data-id="4470">
+              <span class="ticket-id">#4470</span>
+              <span class="ticket-desc">Sync de base de datos técnicos</span>
+              <span class="ticket-status status-resolved">Resuelto</span>
+            </div>
           </div>
           <div class="ticket-foot">SLA promedio · 24hs</div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <section id="servicios" class="services">
     <div class="wrap">
       <h2>En qué te puedo ayudar</h2>
- 
+
       <div class="service-list">
         <article class="service accent-cyan">
           <h3>Soporte técnico N1 / N2</h3>
@@ -81,14 +86,14 @@
           problemas de red, accesos y hardware para equipos internos o
           cuentas de terceros.</p>
         </article>
- 
+
         <article class="service accent-violet">
           <h3>Bases de datos &amp; automatización</h3>
           <p>Diseño y optimización de bases en SQL y PL/SQL para ordenar el
           flujo de trabajo de un equipo de soporte, con reportes y consultas
           a medida.</p>
         </article>
- 
+
         <article class="service accent-cyan">
           <h3>Desarrollo web</h3>
           <p>Sitios y landing pages livianas, pensadas para mostrar un
@@ -97,7 +102,7 @@
       </div>
     </div>
   </section>
- 
+
   <section id="proceso" class="process">
     <div class="wrap">
       <h2>Cómo trabajo</h2>
@@ -129,7 +134,7 @@
       </ol>
     </div>
   </section>
- 
+
   <section id="stack" class="stack">
     <div class="wrap">
       <h2>Herramientas que uso</h2>
@@ -143,14 +148,14 @@
       </ul>
     </div>
   </section>
- 
+
 </main>
- 
+
 <footer id="contacto" class="site-footer">
   <div class="wrap footer-inner">
     <div>
       <p class="footer-lead">¿Tenés un problema técnico o un proyecto en mente?</p>
-      <a href="mailto:mikeasheredia33@gmail.com" class="btn btn-primary">mikeasheredia33@gmail.com</a>
+      <a href="mailto:mikeasheredia33@gmail.com" class="btn btn-primary" id="copy-email" data-email="mikeasheredia33@gmail.com">mikeasheredia33@gmail.com</a>
     </div>
     <div class="footer-links">
       <a href="tel:+543518587200">351 858-7200</a>
@@ -161,6 +166,7 @@
   </div>
   <p class="footer-copy">MH TECH · Córdoba, Argentina</p>
 </footer>
- 
+
+<script src="script.js" defer></script>
 </body>
 </html>
