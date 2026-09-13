@@ -1,11 +1,3 @@
-/* MH TECH — landing page interactions
-   Vanilla JS, sin dependencias. Cuatro cosas:
-   1. Menú mobile (nav-toggle)
-   2. Scroll-spy (marca el link activo del nav)
-   3. Panel de tickets "vivo" (rota estados/tickets)
-   4. Copiar email al portapapeles
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollSpy();
