@@ -8,14 +8,13 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Aviso visual en consola para confirmar que el JS está activo
   console.log("%c MH TECH %c JS activo y operando correctamente 🚀", "background: #33d6e0; color: #000; font-weight: bold; padding: 2px 6px; border-radius: 4px;", "color: #e9edf3;");
 
   initMobileNav();
   initScrollSpy();
   initTicketPanel();
   initCopyEmail();
-  initWhatsAppButton(); // <-- Activamos el botón flotante aquí
+  initWhatsAppButton();
 });
 
 /* 1. Menú mobile ---------------------------------------------------- */
@@ -77,9 +76,9 @@ function initTicketPanel() {
     { id: '4471', desc: 'VPN no conecta — cuenta Claro', status: 'open' },
     { id: '4472', desc: 'Login corporativo bloqueado — GM', status: 'progress' },
     { id: '4470', desc: 'Sync de base de datos técnicos', status: 'resolved' },
-    { id: '4473', desc: 'Impresora de red sin respuesta', status: 'open' },
-    { id: '4474', desc: 'Reset de accesos — nuevo ingreso', status: 'progress' },
-    { id: '4468', desc: 'Backup de base de datos completado', status: 'resolved' },
+    { id: '4473', desc: 'Incidente de red y conectividad', status: 'open' },
+    { id: '4474', desc: 'Monitoreo de APIs en Kibana', status: 'progress' },
+    { id: '4468', desc: 'Automatización con Power Automate', status: 'resolved' },
   ];
 
   const labels = { open: 'Abierto', progress: 'En curso', resolved: 'Resuelto' };
@@ -137,8 +136,7 @@ function initWhatsAppButton() {
   const btn = document.createElement('a');
   btn.id = 'whatsapp-float';
   
-  // ⚠️ ACÁ CAMBIA: Poné tu número real con código de país y área (Ejemplo Argentina Córdoba: 549351...)
-  const tuNumeroWhatsApp = '5493518587200'; // Usé el teléfono que pusiste en el footer
+  const tuNumeroWhatsApp = '5493518587200';
   const mensajePredeterminado = 'Hola,%20vi%20la%20web%20de%20MH%20TECH%20y%20necesito%20soporte%20técnico.';
   
   btn.href = `https://wa.me/${tuNumeroWhatsApp}?text=${mensajePredeterminado}`;
@@ -146,7 +144,6 @@ function initWhatsAppButton() {
   btn.rel = 'noopener noreferrer';
   btn.setAttribute('aria-label', 'Contactar por WhatsApp');
   
-  // Icono SVG de WhatsApp limpio
   btn.innerHTML = `
     <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
   `;
